@@ -13,14 +13,9 @@ const cookieParser = require("cookie-parser");
 
 const AppError = require("./utils/AppError");
 const globalErrorHandler = require("./controllers/error-controller");
+const cspConfig = require("./utils/CSPConfig");
 
-// const usersRouter = require("./routes/user-router");
-// const sectionRouter = require("./routes/section-router");
-// const mediaRouter = require("./routes/media-router");
-// const seasonRouter = require("./routes/season-router");
-// const episodeRouter = require("./routes/episode-router");
 const viewRouter = require("./routes/view-router");
-// const myListRouter = require("./routes/mylist-router");
 
 const app = express();
 
@@ -53,79 +48,7 @@ app.use(helmet());
 
 // MARK: - Content Security Policy
 
-csp.extend(app, {
-    policy: {
-        directives: {
-            "default-src": ["self"],
-            "style-src": ["self", "unsafe-inline", "https:"],
-            "font-src": ["self",
-                            "https://kit.fontawesome.com/",
-                            "https://fonts.gstatic.com",
-                            "https://cdnjs.cloudflare.com"],
-            "script-src": [
-                "self",
-                "unsafe-inline",
-                "data",
-                "blob",
-                "https://js.stripe.com",
-                "https://*.mapbox.com",
-                "https://*.cloudflare.com/",
-                "https://bundle.js:8828",
-                "ws://localhost:56558/",
-                "ws://127.0.0.1:50143/",
-                "https://cdn.jsdelivr.net/npm/cropperjs@1.5.9/dist/cropper.min.js"
-            ],
-            "worker-src": [
-                "self",
-                "unsafe-inline",
-                "data:",
-                "blob:",
-                "https://*.stripe.com",
-                "https://*.mapbox.com",
-                "https://*.cloudflare.com/",
-                "https://bundle.js:*",
-                "ws://localhost:*/",
-                "ws://127.0.0.1:*/"
-            ],
-            "frame-src": [
-                "self",
-                "unsafe-inline",
-                "data:",
-                "blob:",
-                "https://*.stripe.com",
-                "https://*.mapbox.com",
-                "https://*.cloudflare.com/",
-                "https://bundle.js:*",
-                "ws://localhost:*/",
-                "ws://127.0.0.1:*/"
-            ],
-            "img-src": [
-                "self",
-                "unsafe-inline",
-                "data:",
-                "blob:",
-                "https://*.stripe.com",
-                "https://*.mapbox.com",
-                "https://*.cloudflare.com/",
-                "https://bundle.js:*",
-                "ws://localhost:*/",
-                "ws://127.0.0.1:*/"
-            ],
-            "connect-src": [
-                "self",
-                "unsafe-inline",
-                "data:",
-                "blob:",
-                "https://*.stripe.com",
-                "https://*.mapbox.com",
-                "https://*.cloudflare.com/",
-                "https://bundle.js:*",
-                "ws://localhost:*/",
-                "ws://127.0.0.1:*/"
-            ],
-        },
-    },
-});
+csp.extend(app, cspConfig);
 
 // MARK: - Development Logging
 
@@ -190,12 +113,6 @@ app.use((req, res, next) => {
 // MARK: - Route Mounting
 
 app.use("/", viewRouter);
-// app.use("/api/v1/media", mediaRouter);
-// app.use("/api/v1/users", usersRouter);
-// app.use("/api/v1/seasons", seasonRouter);
-// app.use("/api/v1/episodes", episodeRouter);
-// app.use("/api/v1/sections", sectionRouter);
-// app.use("/api/v1/mylists", myListRouter);
 
 // MARK: - Error Handling Routes
 

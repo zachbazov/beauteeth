@@ -6,20 +6,15 @@ html
         link(rel="stylesheet" href="/css/style.css")
         link(rel='shortcut icon' type="image/png" href="/img/system/favicon.png")
         link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css')
+        link(rel="stylesheet" href='https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css')
         title Teeth Correction | #{title}
 
     body
-        <section>
-        <input type="checkbox" id="check">
-        // HEADER
         include _header
 
-        // CONTENT
         block content
-            h1 Header placeholder
-        </section>
-
-        // FOOTER
+        
         include _footer
 
-        //- script(src='/js/bundle.js')
+        script(src='/js/scrollreveal.min.js')
+        script(src='/js/main.js')

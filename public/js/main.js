@@ -101,3 +101,20 @@ sr.reveal(`.specs__data, .discount__animate`, {
 sr.reveal(`.specs__img, .discount__img`, { origin: 'right' });
 sr.reveal(`.case__img`, { origin: 'top' });
 sr.reveal(`.case__data`);
+
+/** SLIDER **/
+
+// var counter = 1;
+
+// function changeRadio() {
+//   document.getElementById('radio' + counter).checked = true;
+//   counter++;
+
+//   if (counter > 4) {
+//     counter = 1;
+//   }
+
+//   setTimeout(changeRadio, 5000);
+// }
+
+// setTimeout(changeRadio, 5000);

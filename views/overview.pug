@@ -3,6 +3,7 @@ extends base
 block content
     <main class="main">
         <section class="home section" id="home">
+            <div class="background-image"></div>
             <div class="home__container container grid">
                 <div class="home__container-img">
                     <img src="/img/slide-3.png" alt="" class="home__img">
@@ -10,17 +11,25 @@ block content
 
                 <div class="home__data">
                     <div class="home__header">
-                        <h1 class="home__title">Hollywood-style teeth</h1>
-                        <h2 class="home__subtitle">in Georgia</h2>
+                        <h1 class="home__title">שיניים הוליוודיות</h1>
+                        <h2 class="home__subtitle">בגאורגיה</h2>
                     </div>
 
                     <div class="home__footer">
-                        <h3 class="home__title-description">Overview</h3>
-                        <p class="home__description">Enjoy award-winning Beats sound with wireless listening freedom and a sleek, streamlined design with confortable padded earphones, delivering first-rate playback.
+                        <h3 class="home__title-description"></h3>
+                        <p dir="rtl" class="home__description">
+                        | תמיד חלמתם על חיוך הוליוודי?
+                        br
+                        | חיוך מושלם עם שיניים בריאות ולבנות?
+                        br
+                        | אז אנחנו כאן בשביל להגשים לכם את החלום!
+                        br
+                        | אנו מתחייבים להצעת המחיר הזולה ביותר, המשתלמת ביותר, עם הטיפול הכי מקצועי, אסתטי ואיכותי שקיים.
+                        br
                         </p>
                         <a href="#" class="button button--flex">
                             <span class="button--flex">
-                                <i class="ri-information-line"></i> More Info
+                                <i class="ri-information-line"></i> עוד פרטים
                             </span>
                         </a>
                     </div>
@@ -28,132 +37,111 @@ block content
             </div>
         </section>
 
-        //- <section class="sponsor section">
-        //-     <div class="sponsor__container container grid">
-        //-         <img class="sponsor__img" src="img/sponsor1.png" alt="">
-        //-         <img class="sponsor__img" src="img/sponsor2.png" alt="">
-        //-         <img class="sponsor__img" src="img/sponsor3.png" alt="">
-        //-         <img class="sponsor__img" src="img/sponsor4.png" alt="">
-        //-     </div>
-        //- </section>
-
         <section class="specs section grid" id="service">
-            <h2 class="section__title section__title-gradient">Service</h2>
+            <h2 class="section__title section__title-gradient">פרטי השירות</h2>
 
-            <div class="specs__container container grid">
-                <div class="specs__content grid">
-                    <div class="specs__data">
-                        <i class="ri-service-line"></i>
-                        <h3 class="specs__title">Restoration</h3>
-                        <span class="specs__subtitle">Implants & Zirconia-teeth with <br> full-mouth restoration.</span>
-                    </div>
-
-                    //- <div class="specs__data">
-                    //-     <i class="ri-battery-2-charge-line specs__icon"></i>
-                    //-     <h3 class="specs__title">Battery</h3>
-                    //-     <span class="specs__subtitle">Duration 40h</span>
-                    //- </div>
-
-                    //- <div class="specs__data">
-                    //-     <i class="ri-price-tag-line"></i>
-                    //-     <h3 class="specs__title">Pricing</h3>
-                    //-     <span class="specs__subtitle">Fast charge 4.2-AAC</span>
-                    //- </div>
-
-                    <div class="specs__data">
-                        <i class="ri-flight-land-line"></i>
-                        <h3 class="specs__title">Airport Pickup</h3>
-                        <span class="specs__subtitle">A private escort from the airport.</span>
-                    </div>
-
-                    <div class="specs__data">
-                        <i class="ri-group-2-fill"></i>
-                        <h3 class="specs__title">Comprehensive Guidance</h3>
-                        <span class="specs__subtitle">Assistance provided throughout the entire <br> course of the treatment or process.</span>
-                    </div>
-
-                    <div class="specs__data">
-                        <i class="ri-hotel-line"></i>
-                        <h3 class="specs__title">Accomodation</h3>
-                        <span class="specs__subtitle">an opportunity to make a reservation <br> at a luxury five-star hotel at a <br> discounted or special price</span>
-                    </div>
+            <div class="containerxx">
+                <div class="box">
+                    <i class="fa-solid fa-stethoscope specs-img"></i>
+                    <p class="box-description">שתלים או ציפוי זרקוניה לפה מלא.</p>
                 </div>
-
-                <div>
-                    <img class="specs__img" src="img/slide-5.png" alt="">
+                <div class="divider"></div>
+                <div class="box">
+                    <i class="fa-solid fa-car specs-img"></i>
+                    <p class="box-description">ליווי אישי משדה התעופה ואיסוף עם רכב.</p>
+                </div>
+                <div class="divider"></div>
+                <div class="box">
+                    <i class="fa-solid fa-hotel specs-img"></i>
+                    <p class="box-description">רישום במלון 5 כוכבים במחיר מוזל.</p>
                 </div>
             </div>
+            //- <div class="specs__container container grid">
+            //-     <div class="specs__content grid">
+            //-         <div class="specs__data">
+            //-             <i class="ri-service-line"></i>
+            //-             <h3 class="specs__title">חידוש</h3>
+            //-             <span class="specs__subtitle">שתלים או ציפוי זרקוניה לפה מלא.</span>
+            //-         </div>
+
+            //-         <div class="specs__data">
+            //-             <i class="ri-flight-land-line"></i>
+            //-             <h3 class="specs__title">איסוף משדה התעופה</h3>
+            //-             <span class="specs__subtitle">ליווי אישי משדה התעופה בגאורגיה.</span>
+            //-         </div>
+
+            //-         <div class="specs__data">
+            //-             <i class="ri-group-2-fill"></i>
+            //-             <h3 class="specs__title">ליווי ותמיכה</h3>
+            //-             <span class="specs__subtitle">ליווי צמוד של מתורגמן לכל אורך התהליך.</span>
+            //-         </div>
+
+            //-         <div class="specs__data">
+            //-             <i class="ri-hotel-line"></i>
+            //-             <h3 class="specs__title">לינה</h3>
+            //-             <span class="specs__subtitle">אופציונלי: צ׳ק-אין למלון בוטיק בגאורגיה במחיר מוזל.</span>
+            //-         </div>
+            //-     </div>
+
+            //-     <div>
+            //-         <img class="specs__img" src="img/slide-5.png" alt="">
+            //-     </div>
+            //- </div>
         </section>
 
-        //- <section class="class section grid" id="case">
-        //-     <h2 class="section__title section__title-gradient">Case</h2>
+        //- <section class="products section" id="gallery">
+        //-     <h2 class="section__title section__title-gradient">גלריה</h2>
 
-        //-     <div class="case__container container grid">
-        //-         <div>
-        //-             <img class="case__img" src="/img/case.png" alt="">
-        //-         </div>
-
-        //-         <div class="case__data">
-        //-             <p class="case__description">With comfortable and adaptable case so that you can store it whenever you want, and keep you durability forever.
-        //-             </p>
-
-        //-             <a href="#" class="button button--flex">
-        //-                 <i class="ri-information-line button__icon"></i> More info
-        //-             </a>
+        //-     <div class="containerx">
+        //-         <div class="image-gallery">
+        //-             <div class="column">
+        //-                 <div class="image-item">
+        //-                     <img src="/img/ex-1.jpg" alt="" />
+        //-                 </div>
+        //-                 <div class="image-item">
+        //-                     <img src="/img/ex-2.jpg" alt="" />
+        //-                 </div>
+        //-                 <div class="image-item">
+        //-                     <img src="/img/ex-3.jpg" alt="" />
+        //-                 </div>
+        //-             </div>
+        //-             <div class="column">
+        //-                 <div class="image-item">
+        //-                     <img src="/img/ex-1.jpg" alt="" />
+        //-                 </div>
+        //-                 <div class="image-item">
+        //-                     <img src="/img/ex-2.jpg" alt="" />
+        //-                 </div>
+        //-                 <div class="image-item">
+        //-                     <img src="/img/ex-3.jpg" alt="" />
+        //-                 </div>
+        //-                 <div class="image-item">
+        //-                     <img src="/img/ex-4.jpg" alt="" />
+        //-                 </div>
+        //-             </div>
+        //-             <div class="column">
+        //-                 <div class="image-item">
+        //-                     <img src="/img/ex-1.jpg" alt="" />
+        //-                 </div>
+        //-                 <div class="image-item">
+        //-                     <img src="/img/ex-2.jpg" alt="" />
+        //-                 </div>
+        //-                 <div class="image-item">
+        //-                     <img src="/img/ex-3.jpg" alt="" />
+        //-                 </div>
+        //-             </div>
         //-         </div>
         //-     </div>
         //- </section>
-
-        <section class="products section" id="gallery">
-            <h2 class="section__title section__title-gradient">Explore <br> The Gallery</h2>
-
-            <div class="products__container container grid">
-                <div class="slider">
-                    <div class="slides">
-                        <input type="radio" name="radio-btn" id="radio1">
-                        <input type="radio" name="radio-btn" id="radio2">
-                        <input type="radio" name="radio-btn" id="radio3">
-                        <input type="radio" name="radio-btn" id="radio4">
-
-                        <div class="slide first">
-                            <img src="/img/ex-1.jpg" alt="">
-                        </div>
-                        <div class="slide">
-                            <img src="/img/ex-2.jpg" alt="">
-                        </div>
-                        <div class="slide">
-                            <img src="/img/ex-3.jpg" alt="">
-                        </div>
-                        <div class="slide">
-                            <img src="/img/ex-4.jpg" alt="">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="navigation-auto">
-                    <div class="auto-btn1"></div>
-                    <div class="auto-btn2"></div>
-                    <div class="auto-btn3"></div>
-                    <div class="auto-btn4"></div>
-                </div>
-                
-                <div class="navigation-manual">
-                    <label for="radio1" class="manual-btn"></label>
-                    <label for="radio2" class="manual-btn"></label>
-                    <label for="radio3" class="manual-btn"></label>
-                    <label for="radio4" class="manual-btn"></label>
-                </div>
-            </div>
-        </section>
 
         <section class="discount section" id="contact">
-            <h2 class="section__title section__title-gradient">Contact</h2>
+            <h2 class="section__title section__title-gradient">צור קשר</h2>
 
             <div class="discount__container container grid">
+                <div class="background-image"></div>
                 <div class="discount__animate">
                     <div class="contact__container-info">
-                        <h2 class="discount__title">Racheli B.</h2>
-                        <p class="discount__description">Middleman</p>
+                        <h2 class="discount__title">רחלי</h2>
                     </div>
                     <a href="#" class="button-light button--flex">
                         <i class="ri-whatsapp-line button__icon"></i></i> 054-447-7290
@@ -161,8 +149,7 @@ block content
                 </div>
 
                 <div class="discount__animate">
-                    <h2 class="discount__title">Shani A.</h2>
-                    <p class="discount__description">Middleman</p>
+                    <h2 class="discount__title">שני</h2>
                     <a href="#" class="button-light button--flex">
                         <i class="ri-whatsapp-line button__icon"></i></i> 054-248-1733
                     </a>
